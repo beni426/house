@@ -18,7 +18,7 @@
     <td><%= property.memo %></td>
     <td><%= link_to '詳細を確認する', property_path(property.id) %></td>
     <td><%= link_to "ブログを編集する", edit_property_path(property.id) %></td>
-    <td><%= link_to 'ブログを削除する', property_path(property.id), method: :delete %></td>
+    <td><%= link_to 'ブログを削除する', property_path(property.id), method: :delete ,data: { confirm: '本当に削除していいですか？' }%></td>
   </tr>
 <% end %>
 </table>

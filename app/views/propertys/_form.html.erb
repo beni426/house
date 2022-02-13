@@ -27,11 +27,11 @@
       <%= nearest_station.index + 1 %>
     </h4>
     <%= nearest_station.label :route_name, '路線名' %><br>
-    <%= nearest_station.textfield :route_name %><br>
+    <%= nearest_station.text_field :route_name %><br>
     <%= nearest_station.label :station, '駅名' %><br>
-    <%= nearest_station.textfield :station %><br>
+    <%= nearest_station.text_field :station %><br>
     <%= nearest_station.label :time, '徒歩分数' %><br>
-    <%= nearest_station.textfield :time %>分<br>
+    <%= nearest_station.text_field :time %>分<br>
   <% end %>
   <%= f.submit '登録する' %><br>
 <% end %>
