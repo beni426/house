@@ -6,12 +6,8 @@ class PropertysController < ApplicationController
    def new
      @property=Property.new
    end
-   def confirm
-     @property=Property.new(property_params)
-     render :new if @property.invalid?
-   end
    def create
-    @property = property.new(property_params)
+    @property = Property.new(property_params)
     if params[:back]
       render :new
     else
@@ -43,7 +39,7 @@ class PropertysController < ApplicationController
      params.require(:property).permit(:property_name,:rent,:address,:age,:memo)
    end
    def set_property
-     @property = property.find(params[:id])
+     @property = Property.find(params[:id])
    end
  end
  
