@@ -9,10 +9,10 @@
 <hr>
 
 <h2>最寄り駅1</h2>
-<p>路線名: <%= @nearest_stations.route_name %></p>
-<p>駅名: <%= @nearest_stations.station %></p>
-<p>徒歩分数: <%= @nearest_stations.time %></p>
+<p>路線名: <%=@property.nearest_stations.last.route_name %></p>
+<p>駅名: <%= @property.nearest_stations.last.station %></p>
+<p>徒歩分数: <%= @property.nearest_stations.last.time %></p>
 <h2>最寄り駅2</h2>
-<p>路線名: <%= @nearest_stations.route_name %></p>
-<p>駅名: <%= @nearest_stations.station %></p>
-<p>徒歩分数: <%= @nearest_stations.time %></p>
+<p>路線名: <%= @property.nearest_stations.last.route_name %></p>
+<p>駅名: <%= @property.nearest_stations.last.station %></p>
+<p>徒歩分数: <%= @property.nearest_stations.last.time %></p>

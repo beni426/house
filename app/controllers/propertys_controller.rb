@@ -23,7 +23,7 @@ class PropertysController < ApplicationController
   end
    
    def show
-    binding.pry
+    
    end
    def edit
      @property.nearest_stations.build
@@ -49,7 +49,7 @@ class PropertysController < ApplicationController
        :address,
        :age,
        :memo,
-       nearest_stations_attributes:  %i[ route_name station time ],
+       nearest_stations_attributes: [:route_name, :station, :time ],
       )
    end
    def set_property
