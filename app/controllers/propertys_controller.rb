@@ -23,16 +23,17 @@ class PropertysController < ApplicationController
   end
    
    def show
-    
+  
    end
    def edit
      @property.nearest_stations.build
+     
    end
    def update
     if @property.update(property_params)
      redirect_to propertys_path, notice: "物件情報を編集しました！"
     else
-      @property.nearest_stations.build
+     
      render :edit
     end
    end
@@ -42,14 +43,13 @@ class PropertysController < ApplicationController
    end
    private
    def property_params
-   
      params.require(:property).permit(
        :property_name,
        :rent,
        :address,
        :age,
        :memo,
-       nearest_stations_attributes: [:route_name, :station, :time ],
+       nearest_stations_attributes: [:id,:route_name, :station, :time ],
       )
    end
    def set_property

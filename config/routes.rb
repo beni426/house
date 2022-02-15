@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get '/propertys/new', to: 'propertys#new'
 
-   resources :propertys
+  resources :propertys
+  
+  
 end
